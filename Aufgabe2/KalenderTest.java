@@ -26,7 +26,7 @@ class KalenderTest {
 		int tag = 5;
 		int monat = 1;
 		
-		boolean actualResult = kalender.tagGültig(tag, monat);
+		boolean actualResult = kalender.tagGueltig(tag, monat);
 		
 		assertTrue(actualResult);
 	}
@@ -37,7 +37,7 @@ class KalenderTest {
 		int tag = 28;
 		int monat = 2;
 		
-		boolean actualResult = kalender.tagGültig(tag, monat);
+		boolean actualResult = kalender.tagGueltig(tag, monat);
 		
 		assertTrue(actualResult);
 	}
@@ -48,18 +48,18 @@ class KalenderTest {
 		int tag = 5;
 		int monat = 6;
 		
-		boolean actualResult = kalender.tagGültig(tag, monat);
+		boolean actualResult = kalender.tagGueltig(tag, monat);
 		
 		assertTrue(!actualResult);
 	}
 	
 	@Test
-	@DisplayName("Ungültige Eingabeparameter")
+	@DisplayName("Ungueltige Eingabeparameter")
 	void testUngueltigesDatum() {
 		int tag = 50;
 		int monat = 100;
 		
-		boolean actualResult = kalender.tagGültig(tag, monat);
+		boolean actualResult = kalender.tagGueltig(tag, monat);
 		
 		assertTrue(!actualResult);
 	}
